@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Detail | FilmBox</title>
+	<link rel="shortcut icon" href="favicon.png" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<link href="mdb5-standard-UI-kit-free-6.0.1/css/mdb.min.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="styly.css" />
+
+</head>
+
+<body>
+	<!-- Navigace -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-white">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" id="menu-tlacitko" aria-label="menu">
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="menu-polozky">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">FilmBox</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="seznam.html">Seznam filmů</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="o-webu.html">O webu</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Detail -->
+	<div class="container-lg mt-5">
+		<div class="card mb-3" id="detail-filmu">
+			<div class="row g-0">
+				<div class="col-md-5">
+					<img src="https://via.placeholder.com/663x909?text=Plak%C3%A1t" alt="plakát" class="img-fluid rounded-start" width="663" height="909" />
+				</div>
+				<div class="col-md-7">
+					<div class="card-body">
+						<h5 class="card-title">Sem patří název filmu</h5>
+						<p class="card-text">Tady bude dluhý popis filmu.</p>
+						<p class="card-text">
+							<small class="text-muted" id="premiera">Premiéra <strong>24. prosince 2022</strong>, což je za 24
+								dní.</small>
+						</p>
+						<h6>Hodnocení</h6>
+						<div class="stars">
+							<button class="far fa-star button-star" data-mdb-toggle="tooltip" title="Nic moc">
+								1
+							</button>
+							<button class="far fa-star button-star" data-mdb-toggle="tooltip" title="Ucházející">
+								2
+							</button>
+							<button class="far fa-star button-star" data-mdb-toggle="tooltip" title="Dobrý">
+								3
+							</button>
+							<button class="far fa-star button-star" data-mdb-toggle="tooltip" title="Skvělý">
+								4
+							</button>
+							<button class="far fa-star button-star" data-mdb-toggle="tooltip" title="Úžasný">
+								5
+							</button>
+						</div>
+
+						<h6 class="mt-4">Poznámka</h6>
+						<form id="note-form">
+							<div class="row">
+								<div class="col-md-6 col-lg-7 col-xl-8 mb-2">
+									<div class="form-outline">
+										<textarea class="form-control" id="message-input" rows="4"></textarea>
+										<label class="form-label" for="message-input">Text poznámky</label>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-5 col-xl-4">
+									<div class="form-check d-flex justify-content-center mb-2">
+										<input class="form-check-input me-2 mb-2" type="checkbox" value="" id="terms-checkbox" />
+										<label class="form-check-label" for="terms-checkbox">
+											Souhlasím se všeobecnými podmínky užívání.
+										</label>
+									</div>
+									<button type="submit" class="btn btn-primary btn-block">
+										Uložit
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Přehrávač -->
+	<div class="container-lg mt-5">
+		<div id="prehravac" class="player rounded shadow-4">
+			<video controls loop preload="auto" poster="https://user-images.githubusercontent.com/1045362/204167262-a16c4755-3d23-400e-b6b0-c9c242399ecf.jpg" width="320" height="180">
+				<source src="https://user-images.githubusercontent.com/1045362/204137892-c6aee4cd-8cc1-44db-b076-71774d67c7b3.mp4" type="video/mp4" />
+			</video>
+			<div class="player-controls">
+				<button type="button" class="play fas fa-play">Přehrát</button>
+				<button type="button" class="pause fas fa-pause">Pozastavit</button>
+				<time class="current-time">00:00</time>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+	<script src="mdb5-standard-UI-kit-free-6.0.1/js/mdb.min.js" defer></script>
+</body>
+
+</html>
