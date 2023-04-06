@@ -120,4 +120,59 @@ const openHideMenu = () => {
 let menuTlacitko = document.querySelector('#menu-tlacitko')
 menuTlacitko.addEventListener('click', openHideMenu)
 
+let seznam = document.querySelector('#seznam-filmu')
+
+if (seznam) {
+	seznam.innerHTML = ''
+	filmy.forEach(film => {
+		seznam.innerHTML += `
+		<div class="col">
+			<div class="card">
+				<img
+					src='${film.plakat.url}'
+					width='${film.plakat.sirka}'
+					height='${film.plakat.vyska}'
+					class="card-img-top"
+					alt="plakát"
+				/>
+				<div class="card-body">
+					<h5 class="card-title">${film.nazev}</h5>
+					<p class="card-text">${film.ochutnavka}</p>
+					<a href="film.html#${film.id}" class="btn btn-primary">Přehrát</a>
+				</div>
+			</div>
+		</div>
+		`
+	}
+	)
+}
+console.log(filmy.length)
+
+let detail = document.querySelector('#detail-filmu')
+if (detail) {
+	let idFilm = location.hash.substring(1)
+	let film = ''
+	filmy.forEach((porovnFilm) => {
+		if (idFilm === porovnFilm.id) {
+			film = porovnFilm
+			let title = document.querySelector('.card-title')
+			title.innerHTML = film.nazev
+			let longText = document.querySelector('.card-text')
+			longText.innerHTML = film.popis
+			let poster = document.querySelector('.col-md-5 img')
+			poster.src = film.plakat.url
+			poster.width = film.plakat.sirka
+			poster.height = film.plakat.vyska
+			let premiera = document.querySelector('#premiera')
+			let premieraDate = dayjs(film.premiera).format('D. M. YYYY')
+			premiera.innerHTML = `Premiéra <strong>${premieraDate}</strong>`
+
+		}
+	})
+	console.log(dayjs(film.premiera))
+}
+//6 BONUS
+
+
+
 
