@@ -17,7 +17,7 @@ img {
 
 video {
 	width: 100%;
-	height: auto;
+	height: 100vh;
 }
 
 .intro {
@@ -118,4 +118,26 @@ video[controls]+.player-controls {
 
 .show {
 	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	img {
+		height: 60%;
+	}
+
+	.card-body {
+		height: 40%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	#seznam-filmu {
+		max-width: 950px;
+		margin: auto;
+	}
+
+	.btn-primary {
+		width: 100.531px;
+	}
 }
