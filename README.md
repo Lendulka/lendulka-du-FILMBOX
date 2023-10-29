@@ -65,7 +65,7 @@ Na stránce se seznamem filmů vypište karty se všemi filmy z pole `filmy`.
 
 - Vzhledem k tomu, že `script.js` se používá i na podstránkách bez seznamu filmů, bez prvku `#seznam-filmu`, může se stát, že váš kód bude zobrazovat chybu ve vývojářských nástrojích například na detailu `film.html`. Obalte váš kód tedy podmínkou, ať se pouští pouze v případě, že se v HTML aktuální stránky `#seznam-filmu` nachází. 
 
-![ukázka výsledku](https://kodim.cz/cms/assets/kurzy/javascript-vyuka/js-1/filmbox/projekt/cvlekce%3Eseznam-filmu/reseni.jpg)
+![ukázka výsledku](/ukazky/reseni-seznam-filmu.jpg)
 
 # Bonus
 Přidejte do pole s filmy nějaký další dle vlastního výběru.
@@ -82,7 +82,7 @@ Zobrazte příslušné informace o filmu na stránce s detailem.
 - Cyklem prohledejte pole `filmy` a film se stejným id si poznamenejte do proměnné.
 - Vepište informace (název, popis, plakát) o nalezeném filmu do stránky. Upravte textový obsah a atributy příslušných potomků prvku `#detail-filmu`. Do `.card-text` vepište dlouhý popis filmu. 
 
-![ukázka výsledku](https://kodim.cz/cms/assets/kurzy/javascript-vyuka/js-1/filmbox/projekt/cvlekce%3Edetail-filmu/reseni.jpg)
+![ukázka výsledku](/ukazky/reseni-bonus-detail-filmu.jpg)
 
 
 ## 6. Bonus: Premiéra
